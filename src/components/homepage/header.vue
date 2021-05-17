@@ -52,7 +52,7 @@
     </div>
     <div class="signIn" v-show="show">
       <p class="test">Every single moment is unexperienced</p>
-      <el-button type="primary" class="button1" style="font-weight:900; color: white;">现在加入</el-button>
+      <el-button type="primary" class="button1" style="font-weight:900; color: white;" v-on:click="toSignIn">现在加入</el-button>
     </div>
 
   </div>
@@ -114,7 +114,13 @@ Vue.use(Router)
       },
       toSignIn:function (){
         this.$router.push({name:'signIn'})
+      },
+      toRegist:function () {
+          this.$router.push({name:'regist'})
+
       }
+
+
 		},
     watch: {
       windowHeight:function () {
